@@ -42,13 +42,30 @@ let exampleArray = [
 let filtered = [];
 let array1 = [];
 let array2 = [];
+let moreSplitArray = [];
+let stringToArray = [];
+let endOfStringToArray = [];
 // let array1 = []
 
 function MergeStrings(strings) {
   //step 1 - remove array elements within the exampleArray array, so that there are only individual strings there
   for (var i = 0; i < strings.length; i++) {
     var split = strings[i].split(""); // just split once
-    console.log(split);
+    //     console.log(split);
+    for (let j = 0; j < split.length; j++) {
+      //       console.log(split[j]);
+      if (split[j].length >= 1) {
+        stringToArray.push(split[j]);
+        // console.log("stringToArray" + stringToArray);
+        endOfStringToArray = stringToArray[stringToArray.length];
+        // console.log("endOfStringToArray" + endOfStringToArray);
+      }
+      console.log("stringToArray" + stringToArray);
+      //       endOfStringToArray = stringToArray[stringToArray.length - 1];
+      //       console.log("endOfStringToArray" + endOfStringToArray);
+      //       moreSpitArray = split[j].concat(split[j + 1]);
+      //       console.log("moreSplitArray" + moreSplitArray);
+    }
     //     array1.push(split[i]); // before the dot
     //     array2.push(split[1]); // after the dot
   }
