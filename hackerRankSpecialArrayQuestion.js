@@ -58,12 +58,13 @@ function MergeStrings(strings) {
       if (split[j].length >= 1) {
         stringToArray.push(split[j]);
         // console.log("stringToArray" + stringToArray);
-        endOfStringToArray = stringToArray[stringToArray.length];
-        // console.log("endOfStringToArray" + endOfStringToArray);
       }
       //       console.log("stringToArray" + stringToArray);
       //       console.log(stringToArray.length); //confirmed i have 40 elements
-      console.log(stringToArray[stringToArray.length - 1]); // here is the exampleArray with all of its string elements sorted out individually
+      //       console.log(stringToArray[stringToArray.length - 1]); // HERE is the exampleArray with all of its string elements sorted out individually
+      let endOfStringToArray = stringToArray[stringToArray.length - 1];
+      console.log(endOfStringToArray);
+      console.log(endOfStringToArray.length);
       //       endOfStringToArray = stringToArray[stringToArray.length - 1];
       //       console.log("endOfStringToArray" + endOfStringToArray);
       //       moreSpitArray = split[j].concat(split[j + 1]);
