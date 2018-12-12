@@ -7,9 +7,9 @@ function vowelsAndConsonants(s) {
       s[i] == "o" ||
       s[i] == "u"
     ) {
-      console.log("vowels " + s[i]);
+      // console.log("vowels " + s[i]);
     } else {
-      console.log("constants " + s[i]);
+      // console.log("constants " + s[i]);
     }
   }
 }
@@ -24,13 +24,13 @@ function vowelsAndConsonants(s) {
   let consonents = [];
   for (let x in s) {
     if ("aeiou".includes(s[x])) {
-      console.log(s[x]);
+      // console.log(s[x]);
     } else {
       consonents.push(s[x]);
     }
   }
   for (let nV in consonents) {
-    console.log(consonents[nV]);
+    // console.log(consonents[nV]);
   }
 }
 // final correct way of doing it
@@ -38,13 +38,13 @@ function vowelsAndConsonants(s) {
   let consonents = [];
   for (let l in s) {
     if ("aeiou".includes(s[l])) {
-      console.log(s[l]);
+      // console.log(s[l]);
     } else {
       consonents.push(s[l]);
     }
   }
   for (let nV in consonents) {
-    console.log(consonents[nV]);
+    // console.log(consonents[nV]);
   }
 }
 
@@ -105,10 +105,10 @@ const PI = Math.PI;
 const r = +readLine();
 
 // Print the area of the circle:
-console.log(PI * r * r);
+// console.log(PI * r * r);
 
 // Print the perimeter of the circle:
-console.log(2 * PI * r);
+// console.log(2 * PI * r);
 
 let filtered = [];
 
