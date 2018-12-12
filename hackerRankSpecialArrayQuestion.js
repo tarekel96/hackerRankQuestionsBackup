@@ -26,6 +26,7 @@
 //   // console.log("should be ordered alphabetically and no numbers: " + sorted);
 // }
 
+// 40 total individual strings
 let exampleArray = [
   "fnaaAfa",
   "a",
@@ -60,7 +61,9 @@ function MergeStrings(strings) {
         endOfStringToArray = stringToArray[stringToArray.length];
         // console.log("endOfStringToArray" + endOfStringToArray);
       }
-      console.log("stringToArray" + stringToArray);
+      //       console.log("stringToArray" + stringToArray);
+      //       console.log(stringToArray.length); //confirmed i have 40 elements
+      console.log(stringToArray[stringToArray.length - 1]); // here is the exampleArray with all of its string elements sorted out individually
       //       endOfStringToArray = stringToArray[stringToArray.length - 1];
       //       console.log("endOfStringToArray" + endOfStringToArray);
       //       moreSpitArray = split[j].concat(split[j + 1]);
