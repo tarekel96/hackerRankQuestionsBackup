@@ -109,3 +109,31 @@ console.log(PI * r * r);
 
 // Print the perimeter of the circle:
 console.log(2 * PI * r);
+
+let filtered = [];
+
+function MergeStrings(strings) {
+  let str = strings;
+  // code filters out the numbers
+  filtered = str.filter(function(item) {
+    return !(parseInt(item) == item);
+  });
+  // test 1
+  console.log("should be no numbers here: " + filtered);
+
+  for (let i = 0; i < str.length; i++) {
+    var split = str[i].replace(/ /g, "").split("");
+    console.log(split);
+    var merged = [].concat.apply([], split);
+    console.log("merged " + merged);
+    // res = str[i].match(/\S/g);
+    // console.log(res);
+  }
+
+  // var sorted = [];
+  // for (var i = 0; i < str.length; i++) {
+  //     sorted.push(str[i].toLowerCase());
+  // }
+  // sorted.sort();
+  // console.log("should be ordered alphabetically and no numbers: " + sorted);
+}
