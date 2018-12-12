@@ -40,44 +40,78 @@ let exampleArray = [
 ];
 // goal - output the elements of the example Array in alphabetical order, all lower-case, no numbers
 
-let filtered = [];
-let array1 = [];
-let array2 = [];
-let moreSplitArray = [];
-let stringToArray = [];
-let endOfStringToArray = [];
-// let array1 = []
+let exampleArray2 = [
+  ["fnaaAfa"],
+  "a",
+  "2",
+  "ads",
+  "2891hdnja",
+  "G",
+  [323, "fkaj"],
+  "djiaf",
+  "FMNA531",
+  "FNAKSJ"
+];
 
 function MergeStrings(strings) {
-  //step 1 - remove array elements within the exampleArray array, so that there are only individual strings there
-  for (var i = 0; i < strings.length; i++) {
-    var split = strings[i].split(""); // just split once
-    //     console.log(split);
-    for (let j = 0; j < split.length; j++) {
-      //       console.log(split[j]);
-      if (split[j].length >= 1) {
-        stringToArray.push(split[j]);
-        // console.log("stringToArray" + stringToArray);
-      }
-      //       console.log("stringToArray" + stringToArray);
-      //       console.log(stringToArray.length); //confirmed i have 40 elements
-      //       console.log(stringToArray[stringToArray.length - 1]); // HERE is the exampleArray with all of its string elements sorted out individually
-      let endOfStringToArray = stringToArray[stringToArray.length - 1];
-      console.log(endOfStringToArray);
-      console.log(endOfStringToArray.length);
-      //       endOfStringToArray = stringToArray[stringToArray.length - 1];
-      //       console.log("endOfStringToArray" + endOfStringToArray);
-      //       moreSpitArray = split[j].concat(split[j + 1]);
-      //       console.log("moreSplitArray" + moreSplitArray);
-    }
-    //     array1.push(split[i]); // before the dot
-    //     array2.push(split[1]); // after the dot
-  }
-  //   console.log("array1", array1);
-  //   console.log("array2", array2);
-}
+  let newArray = strings.join("").split("");
+  newArray = filterOutNumbers(newArray);
+  //   console.log(newArray);
+  newArray = newArray.sort();
+  console.log(newArray);
 
-MergeStrings(exampleArray);
+  function isNotNumber(char) {
+    return /^[a-zA-Z]*$/.test(char);
+    //     return isNaN(Number(char));
+  }
+
+  function filterOutNumbers(chars) {
+    chars = chars.filter(isNotNumber);
+    return chars.map(char => {
+      return char.toLowerCase();
+    });
+  }
+}
+MergeStrings(exampleArray2);
+
+// let filtered = [];
+// let array1 = [];
+// let array2 = [];
+// let moreSplitArray = [];
+// let stringToArray = [];
+// let endOfStringToArray = [];
+// // let array1 = []
+
+// function MergeStrings(strings) {
+//   //step 1 - remove array elements within the exampleArray array, so that there are only individual strings there
+//   for (var i = 0; i < strings.length; i++) {
+//     var split = strings[i].split(""); // just split once
+//     //     console.log(split);
+//     for (let j = 0; j < split.length; j++) {
+//       //       console.log(split[j]);
+//       if (split[j].length >= 1) {
+//         stringToArray.push(split[j]);
+//         // console.log("stringToArray" + stringToArray);
+//       }
+//       //       console.log("stringToArray" + stringToArray);
+//       //       console.log(stringToArray.length); //confirmed i have 40 elements
+//       //       console.log(stringToArray[stringToArray.length - 1]); // HERE is the exampleArray with all of its string elements sorted out individually
+//       let endOfStringToArray = stringToArray[stringToArray.length - 1];
+//       console.log(endOfStringToArray);
+//       console.log(endOfStringToArray.length);
+//       //       endOfStringToArray = stringToArray[stringToArray.length - 1];
+//       //       console.log("endOfStringToArray" + endOfStringToArray);
+//       //       moreSpitArray = split[j].concat(split[j + 1]);
+//       //       console.log("moreSplitArray" + moreSplitArray);
+//     }
+//     //     array1.push(split[i]); // before the dot
+//     //     array2.push(split[1]); // after the dot
+//   }
+//   //   console.log("array1", array1);
+//   //   console.log("array2", array2);
+// }
+
+// MergeStrings(exampleArray);
 
 // var array = ["a.READ", "b.CREATE"]
 // var array1 = []; // better to define using [] instead of new Array();
